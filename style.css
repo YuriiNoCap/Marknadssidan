@@ -27,12 +27,13 @@ header a {
 .fa-school-lock {
   position: absolute;
   left: 0;
-  opacity: 0;
+  animation: mymove 7s infinite;
 }
 
-.fa-school-lock:hover {
-  opacity: 1;
-  background-color: #5e503f;
+@keyframes mymove {
+  50% {
+    color: rgb(125, 3, 3);
+  }
 }
 
 #dragon {
@@ -46,12 +47,6 @@ header a {
   right: 0;
   top: 0;
 }
-
-/* ul {
-  display: inline;
-  margin: 0;
-  padding: 0;
-} */
 
 ul li {
   display: inline-block;
@@ -93,10 +88,23 @@ main {
   left: 50%;
   transform: translate(-50%, -40%);
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
-  margin-block-end: 10px;
+  overflow: hidden;
 }
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: medium;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h3 {
+    font-size: small;
+  }
+}
+
 .main-text.hidden {
   opacity: 0;
   background-color: white;
@@ -108,4 +116,26 @@ main {
 
 h3 {
   margin-top: 5%;
+}
+
+footer {
+  background-color: #c6ac8f;
+  text-align: center;
+}
+
+.linje {
+  background-color: #5e503f;
+  width: 100%;
+  height: 10px;
+}
+
+h2 {
+  padding: 10px;
+}
+
+.fa-brands {
+  color: rgb(165, 6, 142);
+  font-size: 2em;
+  text-decoration: none;
+  padding-bottom: 10px;
 }

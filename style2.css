@@ -27,12 +27,14 @@ header a {
 .fa-school-lock {
   position: absolute;
   left: 0;
-  opacity: 0;
+  animation: mymove 7s infinite;
 }
 
-.fa-school-lock:hover {
-  opacity: 1;
-  background-color: #5e503f;
+@keyframes mymove {
+  50% {
+    border-color: #5e503f;
+    color: rgb(125, 3, 3);
+  }
 }
 
 #dragon {
@@ -46,12 +48,6 @@ header a {
   right: 0;
   top: 0;
 }
-
-/* ul {
-  display: inline;
-  margin: 0;
-  padding: 0;
-} */
 
 ul li {
   display: inline-block;
@@ -82,31 +78,8 @@ ul li ul li:hover {
 
 main {
   background-color: #c6ac8f;
-  height: calc(100vh - 42px);
+  height: 100%;
 }
-
-/* .box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.produkt {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-/*
-.picture {
-  width: 20%;
-  border-radius: 5%;
-}
-
-.text {
-  width: 600px;
-  padding-left: 7%;
-  padding-right: 7%;
-} */
 
 h1 {
   text-align: center;
@@ -114,18 +87,76 @@ h1 {
   padding-bottom: 15px;
 }
 
-#produkter {
+.produkter {
   display: flex;
+  justify-content: space-between;
 }
 
 .box {
-  background-color: aliceblue;
-  width: 50%;
-  height: 280px;
+  background-color: #eae0d5;
+  width: 48.5%;
+  height: 400px;
   text-align: center;
+  border-radius: 15px;
+  border: 7px solid black;
+  animation: mymove 10s infinite;
+  margin-bottom: 1%;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 820px) {
+  .produkter {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .box {
+    width: 100%;
+    border: none;
+  }
+}
+
+/* @keyframes mymove {
+  50% {
+    border-color: #5e503f;
+    color: rgb(125, 3, 3);
+  }
+} */
+
+h2 {
+  font-size: 200%;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 150%;
 }
 
 .bild {
-  width: 40%;
-  border-radius: 3%;
+  width: 50%;
+  height: 50%;
+  padding-bottom: 25px;
+}
+
+.bild.x {
+  -webkit-animation: spin 5s linear infinite;
+  -moz-animation: spin 5s linear infinite;
+  animation: spin 5s linear infinite;
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
