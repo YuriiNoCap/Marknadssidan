@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minisajten</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style3.css" />
     <script
       src="https://kit.fontawesome.com/4cd3d6f3ce.js"
       crossorigin="anonymous"
@@ -49,13 +49,62 @@
       </nav>
     </header>
     <main>
-      <div class="tom"></div>
-      <div class="main-text visible">
-        <h1>Välkommen till Åva Gymnasium</h1>
-      </div>
-      <div class="main-text hidden">
-        <h1>Välkommen till Åvas svarta marknaden</h1>
-        <h3>Vi har roligt här😜😈</h3>
+      <div id="questionnaire">
+        <h2>Fyll i frågeformuläret</h2>
+        <div class="box">
+          <form>
+            <label for="fname">Ditt namn:</label><br />
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              placeholder="Förnamn"
+            /><br />
+            <label for="lname"></label><br />
+            <input
+              type="text"
+              id="lname"
+              script
+              name="lname"
+              placeholder="Efternamn"
+            /><br />
+          </form>
+        </div>
+        <div class="box">
+          <form>
+            <label for="email">Din email:</label><br />
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Email"
+            /><br />
+          </form>
+        </div>
+        <div class="box">
+          <form>
+            <label for="alternativ">Vad handlar ditt medelande om?</label>
+            <select id="country" name="country">
+              <option value="australia">Produkter</option>
+              <option value="canada">Kontakter</option>
+              <option value="usa">Annat alternativ</option>
+            </select>
+          </form>
+        </div>
+        <div class="box">
+          <form>
+            <label for="medelande">Medelande:</label><br />
+            <input
+              type="text"
+              id="medelande"
+              name="medelande"
+              placeholder=" "
+            /><br />
+          </form>
+        </div>
+        <div class="box">
+          <input type="lämna-in" value="Lämna in" />
+        </div>
       </div>
     </main>
     <footer>
